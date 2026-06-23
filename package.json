@@ -1,0 +1,12 @@
+{
+  "name": "vaishnavi-portfolio",
+  "version": "1.0.0",
+  "description": "Dynamic Portfolio for Dhanwate Vaishnavi",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000 -o"
+  },
+  "keywords": [],
+  "author": "Dhanwate Vaishnavi",
+  "license": "ISC"
+}

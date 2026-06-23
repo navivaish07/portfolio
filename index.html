@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanwate Vaishnavi | Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Dhanwate Vaishnavi, an IT Engineering student and Cybersecurity enthusiast skilled in Web/Mobile Development, Java, Python, and SAP ABAP.">
+    <meta name="keywords" content="Dhanwate Vaishnavi, IT Engineer, Software Developer, Cybersecurity, Portfolio, Web Development, Android Development, Kotlin, SAP ABAP, Ahmednagar">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <!-- Dynamic Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check"></i>
+            <span id="toast-message">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-accent">&lt;</span>DV<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-glow">
+                    <span class="ping"></span>
+                    Open to Opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Vaishnavi Dhanwate</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I am a <span id="typewriter" class="typewriter"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc">
+                    An enthusiastic IT Engineering student specializing in Web/Mobile Development, IoT, and Cybersecurity. Passionate about designing real-time integrations and securing digital environments.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/in/vaishnavi-dhanwate-a11643291" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/navivaisho7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://tryhackme.com/p/dhanwatevaishnavi0707" target="_blank" rel="noopener" aria-label="TryHackMe"><i class="fa-solid fa-shield-halved"></i></a>
+                    <a href="https://leetcode.com/u/45f8GjZ00R/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="avatar-wrapper">
+                    <div class="glow-ring green"></div>
+                    <div class="glow-ring purple"></div>
+                    <img src="assets/avatar.png" alt="Dhanwate Vaishnavi Profile Avatar" class="avatar-img">
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll to About Section">
+            <span class="mouse-icon">
+                <span class="wheel"></span>
+            </span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <p class="about-lead">
+                        I am currently pursuing a <strong>B.Tech in Information Technology</strong> at Sanjivani College of Engineering, Kopargaon (class of 2027).
+                    </p>
+                    <p class="about-body">
+                        My training lies at the intersection of robust programming, database administration, and security. I enjoy developing clean user interfaces with frontend frameworks and writing secure, performant backends. My interest in security led me to hands-on exploration of network security principles, threat mitigation, and vulnerability scanning.
+                    </p>
+                    <p class="about-body">
+                        Beyond coding, I've spent time organizing awareness campaigns as the Secretary of the Cyber Security Club, and practicing algorithm design on competitive coding platforms.
+                    </p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <h3 class="stat-number">9.1</h3>
+                            <p class="stat-label">B.Tech CGPA</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" id="project-count">7</h3>
+                            <p class="stat-label">Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number">10+</h3>
+                            <p class="stat-label">Certifications</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cards">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <h3>Profile Summary</h3>
+                        </div>
+                        <p>Motivated IT Engineering student with strong foundations in Java, Python, Web Development, DBMS, Computer Networks, and Software Development. Passionate about learning new technologies and contributing to innovative software solutions.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <div class="pills-flex">
+                            <span class="skill-pill">Problem Solving</span>
+                            <span class="skill-pill">Analytical Thinking</span>
+                            <span class="skill-pill">Time Management</span>
+                            <span class="skill-pill">Leadership</span>
+                            <span class="skill-pill">Technical Event Coordination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Skills Tabs Navigation -->
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="programming">Programming</button>
+                <button class="tab-btn" data-tab="cybersecurity">Cybersecurity</button>
+                <button class="tab-btn" data-tab="tools">Tools & Database</button>
+                <button class="tab-btn" data-tab="sap">SAP / Concepts</button>
+            </div>
+
+            <!-- Skills Content Wrapper -->
+            <div class="skills-content-container">
+                <!-- Programming Tab -->
+                <div class="tab-content active" id="programming">
+                    <div class="skills-grid">
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Kotlin / Android Dev</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Web Dev (HTML/CSS/JS/Angular)</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Tab -->
+                <div class="tab-content" id="cybersecurity">
+                    <div class="skills-grid">
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Ethical Hacking Essentials</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Vulnerability Assessment & Network Security</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Nmap, Wireshark & Burp Suite</span>
+                                <span>Intermediate-Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Digital Forensics Essentials</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Database Tab -->
+                <div class="tab-content" id="tools">
+                    <div class="skills-grid">
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Firebase (Auth, DB, Firestore)</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>MongoDB & SQL</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Git, GitHub & Version Control</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Twilio API & Power BI</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAP & Concepts Tab -->
+                <div class="tab-content" id="sap">
+                    <div class="skills-grid">
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>SAP ABAP / Data Dictionary</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>DBMS & OS Concepts</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Computer Networks</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-progress-card">
+                            <div class="skill-info">
+                                <span>Pandas, NumPy & Data Analytics</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Dynamic JSON-driven) -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Projects Showcase</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Dynamic Filter Controls -->
+            <div class="filter-controls" id="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Apps / Web</button>
+                <button class="filter-btn" data-filter="security">Cybersecurity</button>
+                <button class="filter-btn" data-filter="iot">IoT / Hardware</button>
+            </div>
+
+            <!-- Target Project Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Injected via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="certifications-slider">
+                <!-- Featured: Infosys FE Web Dev -->
+                <div class="cert-card featured">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <h3>Infosys Front End Web Developer</h3>
+                    <p class="cert-subtitle">Professional Web Development Certification</p>
+                    <p class="cert-issuer">Infosys</p>
+                </div>
+                
+                <!-- Featured: SAP Cloud ABAP -->
+                <div class="cert-card featured">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-cube"></i>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <h3>SAP Certified Associate</h3>
+                    <p class="cert-subtitle">Back-End Developer - ABAP Cloud</p>
+                    <p class="cert-issuer">SAP SE</p>
+                </div>
+
+                <!-- Ethical Hacking Essentials -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Ethical Hacking Essentials (EHE)</h3>
+                    <p class="cert-subtitle">Security Fundamentals</p>
+                    <p class="cert-issuer">Coursera / EC-Council</p>
+                </div>
+
+                <!-- Digital Forensics Essentials -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
+                    </div>
+                    <h3>Digital Forensics Essentials (DFE)</h3>
+                    <p class="cert-subtitle">Digital Investigations</p>
+                    <p class="cert-issuer">Coursera / EC-Council</p>
+                </div>
+
+                <!-- TryHackMe Jr Penetration Tester -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h3>Jr Penetration Tester</h3>
+                    <p class="cert-subtitle">Hands-on Security Labs</p>
+                    <p class="cert-issuer">TryHackMe</p>
+                </div>
+
+                <!-- TryHackMe Web Fundamentals -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Web Fundamentals</h3>
+                    <p class="cert-subtitle">Web Security Testing Core</p>
+                    <p class="cert-issuer">TryHackMe</p>
+                </div>
+
+                <!-- Web Fundamentals - Web Security -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3>Web Security Specialist</h3>
+                    <p class="cert-subtitle">Web Fundamentals & Defense</p>
+                    <p class="cert-issuer">Web Security Academy</p>
+                </div>
+
+                <!-- NPTEL Java -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>NPTEL Java Programming</h3>
+                    <p class="cert-subtitle">Elite + Silver Certification</p>
+                    <p class="cert-issuer">NPTEL / IIT</p>
+                </div>
+
+                <!-- Tecnohacks C Programming -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>C Programming</h3>
+                    <p class="cert-subtitle">Software Engineering Core</p>
+                    <p class="cert-issuer">Tecnohacks</p>
+                </div>
+
+                <!-- CodeSoft Python Programming -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p class="cert-subtitle">Software Development Track</p>
+                    <p class="cert-issuer">CodeSoft</p>
+                </div>
+
+                <!-- Cisco Cyber Threat Management -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3>Cyber Threat Management</h3>
+                    <p class="cert-subtitle">Security Operations</p>
+                    <p class="cert-issuer">Cisco Networking Academy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Leadership Timeline -->
+    <section id="education" class="education-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Leadership</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="edu-leadership-grid">
+                <!-- Education Timeline (Left) -->
+                <div class="timeline-column">
+                    <h3 class="subsection-title"><i class="fa-solid fa-user-graduate"></i> Academic History</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2023 - 2027</div>
+                            <div class="timeline-content">
+                                <h4>B.Tech in Information Technology</h4>
+                                <p class="institution">Sanjivani College of Engineering, Kopargaon</p>
+                                <span class="score-badge">CGPA: 9.1</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2021 - 2023</div>
+                            <div class="timeline-content">
+                                <h4>HSC (12th Grade)</h4>
+                                <p class="institution">M G Junior College, Pravaranagar</p>
+                                <span class="score-badge">Percentage: 67.50%</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2020 - 2021</div>
+                            <div class="timeline-content">
+                                <h4>SSC (10th Grade)</h4>
+                                <p class="institution">M G Vidyalay, Pravaranagar</p>
+                                <span class="score-badge">Percentage: 87.80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Terminal & Leadership (Right) -->
+                <div class="leadership-column">
+                    <h3 class="subsection-title"><i class="fa-solid fa-shield-halved"></i> Leadership & Activities</h3>
+                    <div class="leadership-summary">
+                        <h4>Secretary, Cyber Security Club</h4>
+                        <p class="institution">Sanjivani College of Engineering</p>
+                        <p class="lead-desc">Coordinated technical events, organized cybersecurity awareness programs, and mentored junior students on threat mitigation and safe web practices.</p>
+                    </div>
+
+                    <!-- Interactive Cyber Terminal Widget -->
+                    <div class="cyber-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="term-btn close"></span>
+                                <span class="term-btn minimize"></span>
+                                <span class="term-btn maximize"></span>
+                            </div>
+                            <span class="terminal-title">vaishnavi@cyber-club:~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line"><span class="prompt">guest@cyber-club:~$</span> <span class="typed-command">cat club_activities.txt</span></div>
+                            <div class="terminal-output">
+* Organized cybersecurity awareness sessions and technical events.
+* Coordinated club activities and student participation.
+* Promoted cybersecurity learning through workshops.
+* Coordinated and hosted events as Club Secretary.
+                            </div>
+                            <div class="terminal-line"><span class="prompt">guest@cyber-club:~$</span> <span class="typed-command">cat hackathons_and_pitches.txt</span></div>
+                            <div class="terminal-output">
+* Participated in SheInspire Hackathon.
+* Competed in Smart India Hackathon (SIH).
+* Entered college level Project Competitions and Startup Pitch events.
+* Practiced problem-solving on LeetCode & CodeChef.
+* Completed labs on TryHackMe & PortSwigger.
+                            </div>
+                            <div class="terminal-line" id="interactive-prompt-line">
+                                <span class="prompt">guest@cyber-club:~$</span>
+                                <input type="text" id="terminal-input" placeholder="Type 'help', 'skills', or 'clear'..." autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-panel">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:dhanwatevaishnavi77@gmail.com">dhanwatevaishnavi77@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+919657087114">+91 96570 87114</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Ahmednagar, Maharashtra, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-grid">
+                        <a href="https://linkedin.com/in/vaishnavi-dhanwate-a11643291" target="_blank" rel="noopener" class="social-btn linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/navivaisho7" target="_blank" rel="noopener" class="social-btn github">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://tryhackme.com/p/dhanwatevaishnavi0707" target="_blank" rel="noopener" class="social-btn tryhackme">
+                            <i class="fa-solid fa-shield-halved"></i> TryHackMe
+                        </a>
+                        <a href="https://leetcode.com/u/45f8GjZ00R/" target="_blank" rel="noopener" class="social-btn leetcode">
+                            <i class="fa-solid fa-code"></i> LeetCode
+                        </a>
+                        <a href="https://www.codechef.com/users/navi_0707" target="_blank" rel="noopener" class="social-btn codechef">
+                            <i class="fa-solid fa-mug-hot"></i> CodeChef
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-panel">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required placeholder="Collaboration / Job Opportunity">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Dhanwate Vaishnavi. All rights reserved.</p>
+            <p>Designed and Built with <i class="fa-solid fa-heart"></i> & Vanilla Web Stack</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal -->
+    <div id="project-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-visual" id="modal-visual">
+                    <!-- Project cover icon or visualization -->
+                </div>
+                <div class="modal-content">
+                    <span class="modal-tag" id="modal-category">Web App</span>
+                    <h2 class="modal-title" id="modal-title">Project Title</h2>
+                    <p class="modal-tech" id="modal-tech">Angular, Node.js, MongoDB</p>
+                    <div class="modal-divider"></div>
+                    <div class="modal-description" id="modal-desc">
+                        Full detailed description goes here.
+                    </div>
+                    <div class="modal-links" id="modal-links">
+                        <!-- Custom links injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js?v=2"></script>
+</body>
+</html>
