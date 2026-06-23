@@ -1,0 +1,35 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare pages artifact
+        run: |
+          rm -rf public
+          mkdir public
+          cp index.html public/
+          cp package.json public/ || true
+          cp -R assets public/ || true
+          cp script.js public/ || true
+          cp style.css public/ || true
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: public
+
+      - uses: actions/deploy-pages@v1
